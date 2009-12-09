@@ -1,0 +1,9 @@
+[% WRAPPER wrapper.tt %]
+
+<ul>
+[% FOREACH pod IN pods %]
+<li><a href="/author/[% pod.author_id | lower %]/[% pod.dist %]-[% pod.dist_version %]/[% pod.module | uri %]">[% pod.module %]</a> (<a href="/author/[% pod.author_id | lower %]/[% pod.dist %]-[% pod.dist_version %]">[% pod.dist %]-[% pod.dist_version %]</a>)</li>
+[% END %]
+</ul>
+
+[% END %]

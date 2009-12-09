@@ -1,0 +1,53 @@
+[% WRAPPER wrapper.tt %]
+  <div class=path>
+<div id=permalink class="noprint"><a href="/dist/[% dist.name %]/">permalink</a></div>
+  <a href="/~[% dist.author_id | lower %]/">[% dist.author_id %]</a> &gt;
+  [% dist.name %]-[% dist.version %]
+ </div>
+
+ <div class=box>
+  <h1 class=t1>[% dist.name %]-[% dist.version %]</h1>
+
+  <table>
+   <tr>
+    <td class=label>翻訳バージョン</td>
+    <td class=cell>[% dist.name %]-[% dist.version %]</td>
+   </tr>
+   <tr>
+    <td class=label>本家最新</td>
+    <td class=cell><a href="http://search.cpan.org/dist/[% dist-name %]">[% dist.name %]-[% dist.latest_version %]</a></td>
+   </tr>
+
+   <tr>
+    <td class=label>本家ツール</td>
+    <td class=cell colspan=3><small>
+     [&nbsp;<a href="http://www.cpanforum.com/dist/[% dist.name %]">Discussion&nbsp;Forum</a>&nbsp;]
+     [&nbsp;<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=[% dist.name %]">View/Report Bugs</a>&nbsp;]
+     [&nbsp;<a href="http://deps.cpantesters.org/?module=[% dist.name.replace('-', '::') %];perl=latest">Dependencies</a>&nbsp;]
+     [&nbsp;<a href="http://search.cpan.org/tools/[% dist.name %]-[% dist.version %]">Other&nbsp;Tools</a>&nbsp;]
+    </small></td></tr>
+
+    </table></td>
+   </tr>
+  </table>
+ </div>
+
+ <div class=box>
+  <h2 class=t2>Documentation</h2>
+  <table width="100%">
+[% FOREACH pod IN pods %]
+   <tr class="[% IF loop.index % 2 == 0 %]r[% ELSE %]s[% END %]">
+    <td>
+     <a href="/author/[% pod.author_id | lower %]/[% pod.dist %]-[% pod.dist_version %]/[% pod.module | uri %]">[% pod.module %]</a>
+    </td>
+    <td width="99%">
+     <small>[% pod.summary %]</small>
+    </td>
+    <td>&nbsp;</td>
+    <td class="version"><!-- would be version, but we're not parsing it yet --></td>
+   </tr>
+[% END # FOREACH %]
+  </table>
+ </div>
+
+[% END %]
