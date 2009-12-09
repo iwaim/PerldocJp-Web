@@ -10,9 +10,12 @@ requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::View::TT';
 requires 'DBIx::Class';
+requires 'DBD::mysql'; # Cause we work with MySQL, damnit
 requires 'File::Find::Rule';
 requires 'Guard'; # XXX Replace with Scope::Guard if the dep is a problem
 requires 'Moose';
+requires 'MooseX::Getopt';
+requires 'MooseX::SimpleConfig';
 requires 'MooseX::Types::Path::Class';
 requires 'Pod::Xhtml';
 requires 'namespace::autoclean';
