@@ -32,6 +32,11 @@ PerldocJp::Web - Japanese Perldoc Site
 
     # do the following first:
     #
+    # (0) Install our dependencies. You can use the 
+    #     ./script/perldocjp_bundle_lib.pl script to install everything in
+    #     ./extlib. The script (adapted from miyagawa-san's script)
+    #     requires Moose, MooseX::Getopt, and YAML
+    #
     # (1) Deploy the database (currently only MySQL 5.x is supported)
     #     ./script/perldocjp_deploydb.pl \
     #           --connect_info=dbi:mysql:dname=perldocjp \
@@ -65,7 +70,7 @@ PerldocJp::Web - Japanese Perldoc Site
 
 =item CSS, Styling, HTML
 
-I (lestrrat) am NOT an HTML guy.
+I (lestrrat) am NOT an HTML guy. I loathe to work with HTML.
 
 =item Better Full-Text Search
 
