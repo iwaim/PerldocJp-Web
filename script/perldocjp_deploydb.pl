@@ -1,4 +1,4 @@
-#!/opt/local/bin/perl
+#!/usr/bin/env perl
 BEGIN {
     if (-d '.git') {
         unshift @INC, 'lib';
