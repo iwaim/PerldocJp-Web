@@ -32,7 +32,7 @@ PerldocJp::Web - Japanese Perldoc Site
 
     # do the following first:
     #
-    # (1) Deploy the database (currently only MySQL is supported)
+    # (1) Deploy the database (currently only MySQL 5.x is supported)
     #     ./script/perldocjp_deploydb.pl \
     #           --connect_info=dbi:mysql:dname=perldocjp \
     #           --connect_info=username \
@@ -59,6 +59,24 @@ PerldocJp::Web - Japanese Perldoc Site
     #
     # you're all set. run the web server as usual
 
+=head1 TODO
+
+=over 4
+
+=item CSS, Styling, HTML
+
+I (lestrrat) am NOT an HTML guy.
+
+=item Better Full-Text Search
+
+Currently we use MySQL 5.x's REGEXP operator to maximize compatibility.
+it might be better if we created our own full-text index
+
+=item More Features
+
+Yeah, who doesn't want more features
+
+=back
 
 =head1 AUTHOR
 
