@@ -1,0 +1,38 @@
+NAME
+    PerldocJp::Web - Japanese Perldoc Site
+
+SYNOPSIS
+        script/perldocjp_web_server.pl
+
+        # do the following first:
+        #
+        # (1) Deploy the database (currently only MySQL is supported)
+        #     ./script/perldocjp_deploydb.pl \
+        #           --connect_info=dbi:mysql:dname=perldocjp \
+        #           --connect_info=username \
+        #           --connect_info=password
+        #
+        # (2) Get the documents available from perldocjp project
+        #     (this will decode the document to UTF-8 as necessary)
+        #     ./script/perldocjp_update_sources.pl \
+        #           --destination=/path/to/perldocjp
+        #
+        # (3) Get the current CPAN metadata information
+        #     ./script/perldocjp_update_cpan.pl \
+        #           --connect_info=dbi:mysql:dname=perldocjp \
+        #           --connect_info=username \
+        #           --connect_info=password
+        #
+        # (4) Apply the source information from perldocjp and combine with
+        #     the CPAN metadata
+        #     ./script/perldocjp_update_metadata.pl \
+        #           --pod_dir=/path/to/perldocjp/docs/modules/
+        #           --connect_info=dbi:mysql:dname=perldocjp \
+        #           --connect_info=username \
+        #           --connect_info=password
+        #
+        # you're all set. run the web server as usual
+
+AUTHOR
+    Daisuke Maki " <<daisuke@endeworks.jp"> >
+
