@@ -4,6 +4,7 @@ use inc::Module::Install;
 name 'PerldocJp-Web';
 all_from 'lib/PerldocJp/Web.pm';
 
+requires 'Catalyst::Devel'; # XXX Some dependencies only exist here
 requires 'Catalyst::Runtime' => '5.80015';
 requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
