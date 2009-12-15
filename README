@@ -31,7 +31,7 @@ SYNOPSIS
         # (4) Apply the source information from perldocjp and combine with
         #     the CPAN metadata
         #     ./script/perldocjp_update_metadata.pl \
-        #           --pod_dir=/path/to/perldocjp/docs/modules/
+        #           --pod_dir=/path/to/perldocjp/docs/modules/ \
         #           --connect_info=dbi:mysql:dbname=perldocjp \
         #           --connect_info=username \
         #           --connect_info=password
