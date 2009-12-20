@@ -1,7 +1,7 @@
 [% WRAPPER wrapper.tt %]
   <div class=path>
 <div id=permalink class="noprint"><a href="/dist/[% dist.name %]/">permalink</a></div>
-  <a href="/~[% dist.author_id | lower %]/">[% dist.author_id %]</a> &gt;
+  <a href="/author/[% dist.author_id | lower %]/">[% dist.author_id %]</a> &gt;
   [% dist.name %]-[% dist.version %]
  </div>
 
