@@ -1,5 +1,5 @@
 <ul>
 [% FOREACH dist IN dists %]
-<li><a href="[% dist.author_id | lower %]/[% dist.id %]-[% dist.version %]">[% dist.id %] [% dist.version %]</a> (最新：<a href="http://search.cpan.org/dist/[% dist.id %]">[% dist.latest_version %]</a>)</li>
+<li><a href="/author/[% dist.author_id | lower %]/[% dist.name %]-[% dist.version %]">[% dist.name %] [% dist.version %]</a> (最新：<a href="http://search.cpan.org/dist/[% dist.name %]">[% dist.latest_version %]</a>)</li>
 [% END %]
 </ul>
