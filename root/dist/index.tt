@@ -15,7 +15,7 @@
    </tr>
    <tr>
     <td class=label>本家最新</td>
-    <td class=cell><a href="http://search.cpan.org/dist/[% dist-name %]">[% dist.name %]-[% dist.latest_version %]</a></td>
+    <td class=cell><a href="http://search.cpan.org/dist/[% dist.name %]">[% dist.name %]-[% dist.latest_version %]</a></td>
    </tr>
 
    <tr>
