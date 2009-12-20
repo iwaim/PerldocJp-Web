@@ -39,7 +39,7 @@ PerldocJp::Web - Japanese Perldoc Site
     #
     # (1) Deploy the database (currently only MySQL 5.x is supported)
     #     ./script/perldocjp_deploydb.pl \
-    #           --connect_info=dbi:mysql:dname=perldocjp \
+    #           --connect_info=dbi:mysql:dbname=perldocjp \
     #           --connect_info=username \
     #           --connect_info=password
     #
@@ -50,14 +50,14 @@ PerldocJp::Web - Japanese Perldoc Site
     #
     # (3) Get the current CPAN metadata information
     #     ./script/perldocjp_update_cpan.pl \
-    #           --connect_info=dbi:mysql:dname=perldocjp \
+    #           --connect_info=dbi:mysql:dbname=perldocjp \
     #           --connect_info=username \
     #           --connect_info=password
     #
     # (4) Apply the source information from perldocjp and combine with
     #     the CPAN metadata
     #     ./script/perldocjp_update_metadata.pl \
-    #           --pod_dir=/path/to/perldocjp/docs/modules/
+    #           --pod_dir=/path/to/perldocjp/docs/modules/ \
     #           --connect_info=dbi:mysql:dname=perldocjp \
     #           --connect_info=username \
     #           --connect_info=password
